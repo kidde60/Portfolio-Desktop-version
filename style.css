@@ -171,6 +171,18 @@ h3 {
   vertical-align: center;
 }
 
+.work-section {
+  padding: 0 24px;
+  
+}
+
+.placeholder .holder img,
+.background-image1 .holder img,
+.background-image2 .holder img,
+.background-image3 .holder img {
+  width: 100%;
+}
+
 .items {
   display: flex;
   justify-content: center;
@@ -248,7 +260,8 @@ h3 {
 
 .icons {
   display: flex;
-  justify-content: center;
+  align-items:  center;
+  flex-direction: column;
 }
 
 .icons ul {
@@ -375,10 +388,14 @@ form {
 
   .work {
     text-align: left;
+    padding: 50px 0;
+
   }
 
   .work-section {
     display: grid;
+    padding: 0 140px;
+
   }
 
   .placeholder {
@@ -390,6 +407,8 @@ form {
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
+    margin-top: 40px;
+
   }
 
   .background-image1 {
@@ -441,6 +460,12 @@ form {
     border-radius: nullpx;
     text-align: center;
   }
+
+  .form-holder{
+    display: flex;
+    justify-content: center;
+  }
+
 
   form {
     display: flex;
