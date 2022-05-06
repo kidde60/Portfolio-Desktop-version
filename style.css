@@ -10,16 +10,17 @@ header {
   padding: 10px 5%;
 }
 
+.menu {
+  margin-top: 30px;
+}
+
 ul {
   list-style: none;
   margin: 0;
 }
 
 nav ul {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0;
+  display: none;
 }
 
 nav ul li a {
@@ -255,6 +256,10 @@ h3 {
 }
 
 @media only screen and (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+
   .content {
     vertical-align: top;
     display: flex;
@@ -298,6 +303,13 @@ h3 {
     margin-left: 30px;
   }
 
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+
   .bar {
     display: inline-flex;
   }
@@ -332,7 +344,7 @@ h3 {
     background-position: left;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding-bottom: 0;
+    padding: 100px;
   }
 
   .background-image1 {
@@ -343,7 +355,8 @@ h3 {
     background-position: right;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
-    padding-bottom: 0;
+    padding: 0 100px;
+    margin-bottom: 100px;
   }
 
   .background-image2 {
@@ -354,7 +367,7 @@ h3 {
     background-position: left;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding-bottom: 0;
+    padding: 0 100px;
   }
 
   .background-image3 {
@@ -365,7 +378,8 @@ h3 {
     background-position: right;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
-    padding-bottom: 0;
+    padding: 0 100px;
+    margin-top: 100px;
   }
 
   #line {
@@ -379,14 +393,15 @@ h3 {
   }
 
   .contact-form p {
+    height: 61px;
+    width: 684px;
+    border-radius: nullpx;
     text-align: center;
-    width: 60%;
   }
 
   form {
     display: flex;
     flex-direction: column;
-    width: 60%;
   }
 
   #btn {
@@ -399,11 +414,15 @@ h3 {
   #message {
     border-radius: 2px;
     margin-top: 20px;
+    height: 136px;
+    width: 684px;
   }
 
   .text {
     margin-top: 20px;
     height: 48px;
+    width: 684px;
+    border-radius: 2px;
   }
 
   #icon {
@@ -427,31 +446,6 @@ h3 {
 
   .holder {
     z-index: -1;
-    width: 60%;
-    margin: 30px 0 0 30px;
-  }
-
-  .holder img {
-    width: 400px;
-    height: 400px;
-    padding-left: 50px;
-  }
-
-  .holder1 {
-    z-index: -1;
-    width: 70%;
-    margin: 30px 0 0 30px;
-  }
-
-  .holder1 img {
-    width: 400px;
-    height: 400px;
-    padding-right: 70px;
-    margin: 30px 0 0 0;
-  }
-
-  h3 {
-    margin: 0;
   }
 
   .contact-form h2 {
@@ -459,9 +453,5 @@ h3 {
     font-weight: bold;
     color: #9390ff;
     align-items: center;
-  }
-
-  .stories1 {
-    margin-top: 40px;
   }
 }
