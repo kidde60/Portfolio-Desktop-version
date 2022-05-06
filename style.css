@@ -103,7 +103,7 @@ h1 {
 
 .img {
   padding: 0 30px;
-  align-items: center;
+  align-self: center;
 }
 
 p {
@@ -242,6 +242,10 @@ h3 {
   background-position: right;
 }
 
+.bar1 {
+  display: none;
+}
+
 .button:hover {
   background: #7d73fc;
 }
@@ -293,7 +297,11 @@ h3 {
   }
 
   .img {
-    margin: 0 30%;
+    margin: 0 25%;
+  }
+
+  #img1 {
+    margin: 0 5%;
     padding: 0;
   }
 
