@@ -246,6 +246,43 @@ h3 {
   display: none;
 }
 
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+.icons ul {
+  display: flex;
+}
+
+form {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  width: 90%;
+  align-content: space-around;
+}
+
+.text {
+  width: 90%;
+  height: 20px;
+  padding: 20px;
+  margin: 20px;
+}
+
+#message {
+  width: 90%;
+  height: 140px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.email {
+  color: #ebebff;
+  text-align: center;
+  font-size: 20px;
+}
+
 .button:hover {
   background: #7d73fc;
 }
@@ -352,7 +389,7 @@ h3 {
     background-position: left;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 100px;
+    width: 100%;
   }
 
   .background-image1 {
@@ -363,8 +400,7 @@ h3 {
     background-position: right;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
-    padding: 0 100px;
-    margin-bottom: 100px;
+    width: 100%;
   }
 
   .background-image2 {
@@ -375,7 +411,7 @@ h3 {
     background-position: left;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 0 100px;
+    width: 100%;
   }
 
   .background-image3 {
@@ -386,8 +422,7 @@ h3 {
     background-position: right;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
-    padding: 0 100px;
-    margin-top: 100px;
+    width: 100%;
   }
 
   #line {
