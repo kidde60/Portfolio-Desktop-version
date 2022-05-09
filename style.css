@@ -398,7 +398,6 @@ form {
 
   .work-section h3 {
     margin: 0;
-    
   }
 
   .work-section p {
@@ -444,7 +443,7 @@ form {
     flex-direction: row-reverse;
     flex-wrap: nowrap;
     width: 100%;
-    padding: 0px 50px 100px 50px;
+    padding: 0 50px 100px 50px;
   }
 
   .background-image2 {
