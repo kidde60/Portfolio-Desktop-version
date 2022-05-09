@@ -335,6 +335,7 @@ form {
     background-image: url("images/circle2.svg");
     background-repeat: no-repeat;
     background-position: right;
+    padding: 50px;
   }
 
   h1 {
@@ -388,7 +389,20 @@ form {
 
   .work-section {
     display: grid;
-    padding: 0 140px;
+    padding: 150px 100px;
+  }
+
+  .work-section h2 {
+    padding: 50px;
+  }
+
+  .work-section h3 {
+    margin: 0;
+    
+  }
+
+  .work-section p {
+    margin: 0;
   }
 
   .holder {
@@ -418,6 +432,7 @@ form {
     flex-wrap: nowrap;
     width: 100%;
     margin-top: 40px;
+    padding: 100px 50px 140px;
   }
 
   .background-image1 {
@@ -429,6 +444,7 @@ form {
     flex-direction: row-reverse;
     flex-wrap: nowrap;
     width: 100%;
+    padding: 0px 50px 100px 50px;
   }
 
   .background-image2 {
@@ -440,6 +456,7 @@ form {
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
+    padding: 100px 50px 0;
   }
 
   .background-image3 {
@@ -451,6 +468,7 @@ form {
     flex-direction: row-reverse;
     flex-wrap: nowrap;
     width: 100%;
+    padding: 200px 50px 0;
   }
 
   #line {
