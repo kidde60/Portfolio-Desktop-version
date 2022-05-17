@@ -5,9 +5,66 @@ body {
   padding: 0;
   margin: 0;
 }
+.desktop-menu {
+  display: none;
+}
+.navmenu1 {
+  display: none;
+}
+#overlay {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #191765;
+  background-image: url(images/menu-2.svg), url(images/menu-1.svg);
+  background-repeat: no-repeat no-repeat;
+  background-position: top left, bottom right;
+}
 
+.nav1 {
+  width: 30px;
+  height: 30px;
+  padding: 17px 13px 17px 0;
+  box-sizing: content-box;
+  align-self: flex-end;
+  margin: 50px 0;
+  
+}
+
+#overlay a {
+  font-size: 32px;
+  line-height: 56px;
+  color: white;
+  margin-top: 100px;
+  
+  text-decoration: none;
+}
+.navmenu {
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  padding: 0 50px;
+}
+#close-button {
+  margin-top: 10px;
+}
+.image1 {
+  display: none;
+}
+#menu img {
+  float: right;
+  height: 50px;
+  width: 50px;
+}
 header {
-  padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto 30px;
 }
 
 .menu {
@@ -19,9 +76,6 @@ ul {
   margin: 0;
 }
 
-nav ul {
-  display: none;
-}
 
 nav ul li a {
   color: #fff;
@@ -133,9 +187,9 @@ h3 {
 
 .logo h3 {
   color: #fff;
-  margin-top: 10px;
   font-size: 20px;
   text-decoration: none;
+  padding: 0;
 }
 
 .media {
@@ -154,7 +208,7 @@ h3 {
   justify-content: center;
 }
 
-.placeholder {
+.placeholder1 {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -175,7 +229,7 @@ h3 {
   padding: 0 24px;
 }
 
-.placeholder .holder img,
+.placeholder1 .holder img,
 .background-image1 .holder img,
 .background-image2 .holder img,
 .background-image3 .holder img {
@@ -249,8 +303,14 @@ h3 {
   background-position: right;
 }
 
-.bar1 {
+.arrow {
   display: none;
+}
+
+.arrow1 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .icons {
@@ -305,10 +365,33 @@ form {
 }
 
 @media only screen and (min-width: 768px) {
-  .menu {
+  #menu {
+    display: none;
+  }
+  #close-button {
+    display: none;
+  }
+  #overlay {
     display: none;
   }
 
+  header {
+    display: flex;
+  }
+  .navmenu1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 30%;
+  }
+  .navmenu1 a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .desktop-menu {
+    color: #fff;
+  }
+  
   .content {
     vertical-align: top;
     display: flex;
@@ -377,6 +460,10 @@ form {
     justify-content: space-around;
   }
 
+  .arrow1 {
+    display: none;
+  }
+
   .contact ul {
     display: flex;
     justify-content: center;
@@ -408,7 +495,7 @@ form {
     z-index: -1;
   }
 
-  .placeholder .holder,
+  .placeholder1 .holder,
   .background-image1 .holder,
   .background-image2 .holder,
   .background-image3 .holder {
@@ -417,11 +504,11 @@ form {
 
   .stories,
   .stories1 {
-    width: 40%;
+    width: 45%;
     margin-right: 50px;
   }
 
-  .placeholder {
+  .placeholder1 {
     display: flex;
     justify-content: space-between;
     background: url("images/Ellipse\ 19\ \(4\).svg");
