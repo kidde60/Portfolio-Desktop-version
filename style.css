@@ -5,12 +5,20 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .desktop-menu {
   display: none;
 }
+
 .navmenu1 {
   display: none;
 }
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
 #overlay {
   position: fixed;
   display: flex;
@@ -33,7 +41,6 @@ body {
   box-sizing: content-box;
   align-self: flex-end;
   margin: 50px 0;
-  
 }
 
 #overlay a {
@@ -41,26 +48,43 @@ body {
   line-height: 56px;
   color: white;
   margin-top: 100px;
-  
   text-decoration: none;
 }
+
 .navmenu {
   display: flex;
   flex-direction: column;
-  align-items: space-around;
+  align-items: center;
   padding: 0 50px;
 }
+
 #close-button {
-  margin-top: 10px;
+  margin-top: 20px;
+  width: 30px;
+  height: 30px;
 }
+
 .image1 {
   display: none;
 }
+
+img:hover {
+  background: cyan;
+}
+
+.placeholder1 .holder img,
+.background-image1 .holder img,
+.background-image2 .holder img,
+.background-image3 .holder img {
+  width: 100%;
+}
+
 #menu img {
   float: right;
   height: 50px;
   width: 50px;
 }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -74,12 +98,6 @@ header {
 ul {
   list-style: none;
   margin: 0;
-}
-
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
 }
 
 li {
@@ -174,14 +192,10 @@ p {
   padding: 50px 20px;
 }
 
-img:hover {
-  background: cyan;
-}
-
 h3 {
   font-size: 32px;
   text-align: left;
-  vertical-align: center;
+  vertical-align: top;
   padding: 30px;
 }
 
@@ -202,12 +216,6 @@ h3 {
   font-size: 20px;
 }
 
-.arrow {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-
 .placeholder1 {
   display: flex;
   flex-wrap: wrap;
@@ -222,18 +230,11 @@ h3 {
   color: #9490ff;
   font-size: 40px;
   text-align: left;
-  vertical-align: center;
+  vertical-align: top;
 }
 
 .work-section {
   padding: 0 24px;
-}
-
-.placeholder1 .holder img,
-.background-image1 .holder img,
-.background-image2 .holder img,
-.background-image3 .holder img {
-  width: 100%;
 }
 
 .items {
@@ -368,9 +369,11 @@ form {
   #menu {
     display: none;
   }
+
   #close-button {
     display: none;
   }
+
   #overlay {
     display: none;
   }
@@ -378,20 +381,23 @@ form {
   header {
     display: flex;
   }
+
   .navmenu1 {
     display: flex;
     justify-content: space-between;
     padding: 20px;
     width: 30%;
   }
+
   .navmenu1 a {
     color: #fff;
     text-decoration: none;
   }
+
   .desktop-menu {
     color: #fff;
   }
-  
+
   .content {
     vertical-align: top;
     display: flex;
@@ -570,7 +576,7 @@ form {
   .contact-form p {
     height: 61px;
     width: 684px;
-    border-radius: nullpx;
+    border-radius: 0;
     text-align: center;
   }
 
