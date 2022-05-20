@@ -115,11 +115,15 @@
         If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I'd love to help with it. 
     </p>
     <div class="form-holder">
-        <form  action="https://formspree.io/f/mnqwoyza" method="POST">
+        <form class="form" action="https://formspree.io/f/mnqwoyza" method="POST">
+            <label for="username"></label>
             <input id="name" name="Name" class="text" type="text" placeholder="Full Name" maxlength="30" required>
+            <label for="email"></label>
             <input id="email" name="email" class="text" type="email"  placeholder="example@gmail.com" required>
+            <label for="msg"></label>
             <textarea name="Message" id="message" rows="10" maxlength="500" placeholder="Enter text here" required></textarea>
-            <button type="button" id="btn" class="button">See Project</button>
+            <small class="error"></small>
+            <button type="submit" id="btn" class="button">Send</button>
         </form>
     </div>
 </section>

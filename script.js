@@ -231,6 +231,28 @@ cardArr.forEach((item, i) => {
   stories.appendChild(button);
   button.addEventListener('click', openPopup);
 });
+//contact form validation
+const contactForm = document.querySelector('.form');
+const email = contactForm.elements.email;
+const validationMassege = contactForm.querySelector('.error');
+validationMassege.style.color = 'white';
+validationMassege.style.textAlign = 'center'
+validationMassege.style.fontSize = '20px';
+validationMassege.style.padding = '10px';
+validationMassege.style.borderRadius = '2px';
 
+contactForm.addEventListener('submit', (event) => {
+  let isValid = false;
+  if (email.value === email.value.toLowerCase()) {
+    isValid = true;
+  }
+  if (isValid === false) {
+    event.preventDefault();
+    validationMassege.innerText = 'The email field should be in lowercase only.';
+    setTimeout(() => {
+      validationMassege.textContent = '';
+    }, 5000);
+  }
+});
 
     
