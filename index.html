@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
+<body id="body">
     <header>
         <a href="#" class="logo"><h3>KGW</h3></a>
         <div id="overlay">
@@ -105,6 +105,9 @@
     <h2 class="work">MY RECENT WORK</h2>
     <hr>
 </div>
+<section class="popup-window">
+
+</section>
 <section class="work-section" id="About">
 </section>
 <section class="contact-form" id="Contact">
@@ -115,13 +118,14 @@
         If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I'd love to help with it. 
     </p>
     <div class="form-holder">
-        <form  action="https://formspree.io/f/mnqwoyza" method="POST">
+        <form class="form" action="https://formspree.io/f/mnqwoyza" method="POST">
             <input id="name" name="Name" class="text" type="text" placeholder="Full Name" maxlength="30" required>
             <input id="email" name="email" class="text" type="email"  placeholder="example@gmail.com" required>
             <textarea name="Message" id="message" rows="10" maxlength="500" placeholder="Enter text here" required></textarea>
-            <button type="button" id="btn" class="button">See Project</button>
+            <small class="error"></small>
+            <button type="submit" id="btn" class="button">Send</button>
         </form>
-    </div>
+    </div>>
 </section>
 <div class="icon">
     <hr>
