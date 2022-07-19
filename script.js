@@ -22,7 +22,7 @@ for (let i = 0; i < menuLinks.length; i += 1) {
 //Data Array
 let Data = [
   {
-    id: 1,
+    class: 'placeholder1',
     subtitle: 'Multi-Post Stories',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
     popuptext: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramble.',
@@ -38,16 +38,16 @@ let Data = [
       lags: 'Ruby on rails',
     },
     btn: 'See Project',
-   style: {
+    style: {
       style1: 'section-1',
-   },
-   button: {
-     live: 'See live',
-     source: 'See source'
-   }
+    },
+    button: {
+      live: 'See live',
+      source: 'See source'
+    }
   },
   {
-    id: 2,
+    class: 'background-image1',
     subtitle: 'Multi-Post Stories',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
     image: {
@@ -67,7 +67,7 @@ let Data = [
     imageleft: 'image-left',
   },
   {
-    id: 3,
+    class: 'background-image2',
     subtitle: 'Multi-Post Stories',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
     image: {
@@ -87,7 +87,7 @@ let Data = [
 
   },
   {
-    id: 4,
+    class: 'background-image3',
     subtitle: 'Multi-Post Stories',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
     image: {
@@ -109,85 +109,42 @@ let Data = [
 ]
 
 const workSection = document.querySelector('.work-section');
-workSection.innerHTML = `
-<div class="placeholder1">
-        <div class="holder">
-            <img src="images/ImgPlaceholder.png" alt="blank-placeholder">
-            
-        </div>
-        <div class="stories">
-            <h3>Multi-Post Stories</h3>
-            <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.</p>
-            <ul class="items">
-                <li>css</li>
-                <li>html</li>
-                <li>bootstrap</li>
-                <li class="ruby">Ruby</li>
-            </ul>
-            <button class="button" type="button" id="seemore">See Project</button>
-        </div>
-    </div>
-    
-    <div class="background-image1">
-        <div class="holder">
-            <img src="images/ImgPlaceholder.png" alt="blank-placeholder">
-            
-        </div>
-        <div class="stories">
-            <h3>Multi-Post Stories</h3>
-            <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.</p>
-            <ul class="items">
-                <li>css</li>
-                <li>html</li>
-                <li>bootstrap</li>
-                <li class="ruby">Ruby</li>
-            </ul>
-            <button class="button" type="button" id="seemore">See Project</button>
-        </div>
-    </div>
+// JavaScript Dynamic
+Data.forEach((item, index) => {
+  let placeholder = document.createElement('div');
+  placeholder.className = Data[index].class;
+  workSection.appendChild(placeholder);
+  let holder = document.createElement('div');
+  holder.className = 'holder';
+  placeholder.appendChild(holder);
+  let image = document.createElement('img');
+  image.src = Data[index].image.image1;
+  holder.appendChild(image);
+  let stories = document.createElement('div');
+  stories.className = 'stories';
+  placeholder.appendChild(stories);
+  let heading = document.createElement('h3');
+  heading.textContent = Data[index].subtitle;
+  stories.appendChild(heading);
+  let paragraph = document.createElement('p');
+  paragraph.textContent = Data[index].description;
+  stories.appendChild(paragraph);
+  let list = document.createElement('ul');
+  list.className = 'items';
+  // Edit needed
+  stories.appendChild(list);
+  let listItems = Data[index].technologies;
+  // End of edit
+  let button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'button'
+  button.textContent = 'See Project'
+  stories.appendChild(button);
+});
 
-    <div class="background-image2">
-        <div class="holder">
-            <img src="images/ImgPlaceholder.png" alt="blank-placeholder">
-            
-        </div>
-        <div class="stories">
-            <h3>Multi-Post Stories</h3>
-            <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.</p>
-            <ul class="items">
-                <li>css</li>
-                <li>html</li>
-                <li>bootstrap</li>
-                <li class="ruby">Ruby</li>
-            </ul>
-            <button class="button" type="button" id="seemore">See Project</button>
-        </div>
-    </div>
-
-    <div class="background-image3">
-        <div class="holder">
-            <img src="images/ImgPlaceholder.png" alt="blank-placeholder">
-            
-        </div>
-        <div class="stories">
-            <h3>Multi-Post Stories</h3>
-            <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.</p>
-            <ul class="items">
-                <li>css</li>
-                <li>html</li>
-                <li>bootstrap</li>
-                <li class="ruby">Ruby</li>
-            </ul>
-            <button class="button" type="button" id="seemore">See Project</button>
-        </div>
-    </div>
-`
-
+// popup section
 const parent = document.querySelector('.popup-window');
-
-const main = document.createElement('div');
-  main.className = 'popup';
-  parent.innerHTML = `
+parent.innerHTML = `
   <button type="button" class="X"><span>&times;</span></button>
   
   <h3>Multi-post story</h3>
@@ -196,21 +153,14 @@ const main = document.createElement('div');
   <p> 
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramble.</p>
   </div>
-  <ul class="items">
+  <ul class="item">
       <li>html</li>
       <li>Ruby on rails</li>
       <li>css</li>
-      <li>Github</li>
+      <li class="github">Github</li>
   </ul>
   <div class="popbtn">
       <a href="#"><button class="button" id="pop" type="button">See Live <img src="images/source.png" alt=""></button></a>
       <a href="https://github.com/kidde60/Portfolio-Desktop-version"><button class="button" id="pop1" type="button">See Source <img src="images/Vector.png" alt=""></button></a>
   </div>
 `
-const appear = document.querySelector('.button');
-appear.addEventListener ('click', () => {
-  
-
-});
-
-    
